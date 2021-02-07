@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Sahira's Website</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sacramento&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4231346c72.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="top-container">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="">Sahira Sheikh</a>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Introduction">Introduction</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Multivariate Linear Regression">Multivariate Linear Regression</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Proof">BLUE estimator</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Code">Python Code</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-me">Contact Me</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <h1>Introduction to Multivariate Linear Regression</h1>
+        <hr> 
+
+    </div>
+    <div class="middle-container">
+        <div class="skills" id="Introduction">
+            <h2>Introduction to Multivariate Linear Regression</h2>
+            <div class="skill-row">
+                <p class="web-description">
+                    In this kind of regression, we have multiple features to predict a single outcome or in other words, a single dependent variable can be explained by multiple independent variables.<br>
+                    In this regression, we will use Gauss Markov setup which has the following assumptions <br>
+                    <ul>
+                        <li>Errors follow the normal distribution with mean 0 and variance σ<sup>2</sup>I  hence: ε~N(0,σ<sup>2</sup>I)</li>
+                        <li>The errors are homoscedastic (meaning that they have the same variance for all)</li>
+                        <li>Distinct error terms are uncorrelated </li>
+                    </ul>
+                    Hence we can say: for a model containing p regressors and n observations<br>
+                    <img src="https://i.ibb.co/P5dV7cY/regression-eqn-intro.jpg" alt="regression-eqn-intro" border="0" width="93"><br>
+                    Where:<br>
+                    <ul>
+                        <li><img src="https://i.ibb.co/QpD5zX9/ycurl.jpg" alt="ycurl" border="0" width="19"> Is the matrix of order n×1</li>
+                        <li>X Is the matrix of dependent variables of order n×p </li>
+                        <li><img src="https://i.ibb.co/7C6jGzZ/beta-curl.jpg" alt="beta-curl" border="0" width="18"> Is the matrix of the coefficients of the regressors of order p×1</li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <hr>
+    <div class="skill-row" id = "Multivariate Linear Regression">
+        <h2> Multivariate Linear Regression</h2>
+        <p>
+            Now the error can be given by:<br>
+            <img src="https://i.ibb.co/RSnLZDk/error.jpg" alt="error" border="0" width="88"><br>
+            Since in matrix notation, the sum of squares of all the elements in the matrix is given by ∑a<sup>2</sup> = a<sup>T</sup>a<br>
+            Hence the summation of the squared error can be given by<br>
+            ∑ε<sup>2</sup> = ε<sup>T</sup>ε<br>
+            Now substituting <img src="https://i.ibb.co/RSnLZDk/error.jpg" alt="error" border="0" width="88"> in <img src="https://i.ibb.co/kKyfpt5/sum-err.jpg" alt="sum-err" border="0" width="82"><br>
+            <img src="https://i.ibb.co/9TFRM0N/proof-scalar.jpg" alt="proof-scalar" border="0" width="431"><br><br>
+            Since <img src="https://i.ibb.co/r2cB8Jw/scalar-1.jpg" alt="scalar-1" border="0" width="37"> and <img src="https://i.ibb.co/KDRFggW/scalar-2.jpg" alt="scalar-2" border="0" width="45"> are scalars, we can write <img src="https://i.ibb.co/BqyCKrH/rewrite.jpg" alt="rewrite" border="0" width="232"><br> 
+            <img src="https://i.ibb.co/YbKmRcP/rewritten-equation.jpg" alt="rewritten-equation" border="0" width="250"><br>
+            For ordinary least squared approach ∑ε<sup>2</sup> Should be minimum, hence (∂∑ε<sup>2</sup>)/(∂β)=0<br>
+            <img src="https://i.ibb.co/c81SXXx/proof-part2.jpg" alt="proof-part2" border="0" width="253" >
+        </p>
+    </div>
+    <hr>
+    <div class="skill-row" id = "Proof">                                    
+        <h2>Demerits of mode</h2>
+        <p class="web-description">
+            Proof that the estimator that we have found out is BLUE (Best Linear Unbiased Estimator)<br>
+            <img src="https://i.ibb.co/tHM39JW/regression-graph.png" alt="regression-graph" border="0">
+            Here we see that there are both positive and negative errors, hence we can conclude that the error looks like<br>
+            <img src="https://i.ibb.co/MkVDdtr/error-graph.jpg" alt="error-graph" border="0"><br>
+            Hence the distribution of the error looks like<br>
+            <img src="https://i.ibb.co/cDLLZ8z/error-dist.png" alt="error-dist" border="0" width="576" height="216"><br>
+            Since errors are centered around zero and the distribution of the error looks like a normal distribution. Hence we can safely assume<br>
+            ε~N(0,σ<sup>2</sup>I)<br>
+            Where I is an Identity matrix of n×n<br>
+            The residuals are uncorrelated since all the off diagonal elements are 0 which means the covariance between them are 0<br>
+            <img src="https://i.ibb.co/hXxBXF8/linear-proof.jpg" alt="linear-proof" border="0" width="314"><br>
+            This shows that <li><img src="https://i.ibb.co/7C6jGzZ/beta-curl.jpg" alt="beta-curl" border="0" width="18"> is a linear combination of x <br>
+            <img src="https://i.ibb.co/cvHyPgM/E-beta.jpg" alt="E-beta" border="0" width="167"><br>
+            Substituting <img src="https://i.ibb.co/P5dV7cY/regression-eqn-intro.jpg" alt="regression-eqn-intro" border="0" width="93"> in <img src="https://i.ibb.co/cvHyPgM/E-beta.jpg" alt="E-beta" border="0" width="167"><br>
+            <img src="https://i.ibb.co/FwVjnXW/E-beta-2.jpg" alt="E-beta-2" border="0" width="167"><br>
+            Since (X<sup>T</sup>X)<sup>-1</sup>X<sup>T</sup>X=I hence the equation becomes<br>
+            <img src="https://i.ibb.co/sHskVPT/proof-unbiased.jpg" alt="proof-unbiased" border="0" width="88"><br>
+            Since <img src="https://i.ibb.co/sHskVPT/proof-unbiased.jpg" alt="proof-unbiased" border="0" width="88">, we can say that the estimator is unbiased <br>
+            Let β<sup>-</sup> be another unbiased estimator of the regression equation<br>
+            <img src="https://i.ibb.co/ZG0XBXD/beta-bar.jpg" alt="beta-bar" border="0" width="61"><br>
+            For β<sup>-</sup> to be an unbiased estimator E(β<sup>-</sup>) = β<sup>-</sup><br>
+            <img src="https://i.ibb.co/6FzRmZn/E-beta-bar.jpg" alt="E-beta-bar" border="0" width="220"><br>
+            Since (X<sup>T</sup>X)<sup>-1</sup>X<sup>T</sup>X=I hence the equation becomes<br>
+            <img src="https://i.ibb.co/D46CgsQ/E-beta-bar-2.jpg" alt="E-beta-bar-2" border="0" width="136"><br>
+            For the estimator to be unbiased DX=0<br>
+            <img src="https://i.ibb.co/wB7kFvq/var-beta.jpg" alt="var-beta" border="0" width="300"><br>
+            Now<br>
+            <img src="https://i.ibb.co/b19QS88/var-beta-bar.jpg" alt="var-beta-bar" border="0" width="489"><br>
+            Since DD<sup>T</sup> is a non negative definite matrix, 
+            <img src="https://i.ibb.co/whxv4cc/proof-best.jpg" alt="proof-best" border="0" width="190"><br>
+            Since the variance of any other estimator is greater than the variance of our estimator we can conclude that our estimator is the Best Linear Unbiased Estimator
+        </p>
+        <h3>R Squared (R<sup>2</sup>)</h3>
+        <p class="web-description">
+            R-squared is a statistical measure of how close the data are to the fitted regression line. It is also known as the coefficient of determination, or the coefficient of multiple determination for multiple regression.<br>
+
+            It is the percentage of the response variable variation that is explained by a linear model.<br>
+            Or:<br>
+            R-squared = Explained variation / Total variation <br>
+            The formula for R<sup>2</sup> is:<br>
+            <img src="https://i.ibb.co/mS9LLWb/r-squared.jpg" alt="r-squared" border="0" width="165"><br>
+            Where:<br>
+            y<sub>pred</sub> are our predictions using the regression model<br>
+        </p>
+        <h3>Adjusted R squared (Adjusted R<sup>2</sup>)</h3>
+        <p class="web-description">
+            The adjusted R-squared is a modified version of R-squared that has been adjusted for the number of predictors in the model. The adjusted R-squared increases only if the new term improves the model more than would be expected by chance. It decreases when a predictor improves the model by less than expected by chance<br>
+            The formula for adjusted R<sup>2</sup> is given by:<br>
+            <img src="https://i.ibb.co/XyM5S1Z/adjusted-r-squared.png" alt="adjusted-r-squared" border="0"><br>
+        </p>
+    </div>
+    <div class="skill-row" id = "Code">
+        <h2>Python code for Multivariate Linear Regression</h2>
+        <script src="https://gist.github.com/sheikh-sahira1703/a370f84521dbbd95fe5bb38019f57531.js"></script>
+    </div>
+    </div>
+
+    <hr>
+    <div class="contact-me" id="contact-me">
+        <h2>Get In Touch</h2>
+        <h3>Contact Me</h3>
+        <p class="contact">You can contact me via the button given below. Feel free to contact me. Suggestions and corrections are welcomed warmly by me.</p>
+        <a class="btn btn-dark" href="mailto:shiekh_sahira1703@hotmail.com">CONTACT ME</a>
+    </div>
+    <hr>
+    <div class="bottom-container">
+        <div class="social-media">
+            <a class="footer-link" href="https://instagram.com/sahira_speaks?igshid=712oqk2r0kfe"><i class="fab fa-instagram"></i>
+                My Instagram profile
+            </a>
+            <a class="footer-link" href="https://github.com/sheikh-sahira1703"><i class="fab fa-github"></i>
+                GitHub Profile
+            </a>
+            <br>
+            <i class="fas fa-map-pin copyright"></i>
+            <p class="copyright">Mumbai, MH</p>
+        </div>
+
+
+
+        <p class="copyright">© Sahira Sheikh.</p>
+    </div>
+</body>
+
+</html>
+
